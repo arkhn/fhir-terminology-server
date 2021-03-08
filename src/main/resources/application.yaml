@@ -1,11 +1,9 @@
-spring:
+@spring:
   datasource:
-    url: 'jdbc:h2:file:./target/database/h2'
-    #url: jdbc:h2:mem:test_mem
-    username: sa
-    password: null
-    driverClassName: org.h2.Driver
-    max-active: 15
+    url: "jdbc:postgresql://localhost:5432/test-hapi-db"
+    username: hapi
+    password: deadbeefdeadbeef
+    driverClassName: org.postgresql.Driver
 #  jpa:
 #    properties:
 #      hibernate.dialect: org.hibernate.dialect.h2dialect
@@ -44,9 +42,11 @@ hapi:
         #name: hl7.fhir.uv.ips
         #version: 1.0.0
 
-    #supported_resource_types:
-    #  - Patient
-    #  - Observation
+    # supported_resource_types:
+    #  - CodeSystem
+    #  - ValueSet
+    #  - ConceptMap
+
 #    allow_cascading_deletes: true
 #    allow_contains_searches: true
 #    allow_external_references: true
