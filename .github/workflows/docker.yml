@@ -16,7 +16,7 @@ jobs:
         # - always tag with the branch same (replacing '/' with '-')
         # - when a tag follows semver (eg: v1.2.3), tag with 'latest' and '1.2.3'
         with:
-          images: arkhn/hapi-fhir-jpa
+          images: arkhn/terminology-server
           tag-sha: true
           tag-semver: |
             {{version}}
